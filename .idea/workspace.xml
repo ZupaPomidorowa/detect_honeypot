@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Detecting honeypots with nmap">
-      <change afterPath="$PROJECT_DIR$/detect_cowrie.py" afterDir="false" />
+    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Create script to detect cowrie honeypot, class to handle ssh connections, os version test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect_cowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_cowrie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719888006499</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create script to detect cowrie honeypot, class to handle ssh connections, os version test">
+      <option name="closed" value="true" />
+      <created>1719978571981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719978571981</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +174,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Detecting honeypots with nmap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Detecting honeypots with nmap" />
+    <MESSAGE value="Create script to detect cowrie honeypot, class to handle ssh connections, os version test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create script to detect cowrie honeypot, class to handle ssh connections, os version test" />
   </component>
 </project>

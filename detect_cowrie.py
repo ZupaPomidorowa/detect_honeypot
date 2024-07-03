@@ -62,6 +62,78 @@ def check_osversion(ssh_connection):
     else:
         print('[\033[91m-\033[00m"] Os version is different')
 
+def check_meminfo(ssh_connection):
+    print('Checking memory info')
+    end = '~# '
+    resp = ssh_connection.execute_command('cat /proc/meminfo', end)
+    memory = resp.split('\n')[2].strip('\r')
+    default_memory = 'MemFree:          997740 kB'
+    if memory == default_memory:
+        print('[\033[92m+\033[00m] Found static memory information')
+    else:
+        print('[\033[91m-\033[00m"] Memory is different than default value')
+
+def check_mounts(ssh_connection):
+    print('Checking mounts file')
+    end = '~# '
+    resp = ssh_connection.execute_command('cat /proc/mounts', end)
+    mounts = '\n'.join(resp.split('\n')[1:-1])
+    mounts = mounts.strip('\x1b[4l').replace('\r', '')
+    default_mounts = """rootfs / rootfs rw 0 0
+    sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+    proc /proc proc rw,relatime 0 0
+    udev /dev devtmpfs rw,relatime,size=10240k,nr_inodes=997843,mode=755 0 0
+    devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+    tmpfs /run tmpfs rw,nosuid,relatime,size=1613336k,mode=755 0 0
+    /dev/dm-0 / ext3 rw,relatime,errors=remount-ro,data=ordered 0 0
+    tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0
+    tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k 0 0
+    systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=22,pgrp=1,timeout=300,minproto=5,maxproto=5,direct 0 0
+    fusectl /sys/fs/fuse/connections fusectl rw,relatime 0 0
+    /dev/sda1 /boot ext2 rw,relatime 0 0
+    /dev/mapper/home /home ext3 rw,relatime,data=ordered 0 0
+    binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,relatime 0 0"""
+    default_mounts = default_mounts.replace('    ', '')
+    if mounts == default_mounts:
+        print('[\033[92m+\033[00m] Found default mounted file systems')
+    else:
+        print('[\033[91m-\033[00m] Mounted file systems are different')
+
+def check_cpu(ssh_connection):
+    print('Checking cpu')
+    end = '~# '
+    resp = ssh_connection.execute_command('cat /proc/cpuinfo', end)
+    cpu = resp.split('\n')[5].strip('\r')
+    default_cpu = 'model name	: Intel(R) Core(TM)2 Duo CPU     E8200  @ 2.66GHz'
+    if cpu == default_cpu:
+        print('[\033[92m+\033[00m] Found default cpu')
+    else:
+        print('[\033[91m-\033[00m] Cpus are different')
+
+def check_group(ssh_connection):
+    #cat /etc/shadow
+    #cat /ctc/passwd
+    print('Checking cpu')
+    end = '~# '
+    resp = ssh_connection.execute_command('cat /etc/group', end)
+    group = resp.split('\n')[-2]
+    group = group.split(':')[0]
+    default_group = 'phil'
+    if group == default_group:
+        print('[\033[92m+\033[00m] Found phil in group')
+    else:
+        print('[\033[91m-\033[00m] Didn\'t find phil in group')
+
+def check_hostname(ssh_connection):
+    print('Checking hostname')
+    end = '~# '
+    resp = ssh_connection.execute_command('', end)
+    if 'svr04' in resp:
+        print('[\033[92m+\033[00m] Found defeault hostname')
+    else:
+        print('[\033[91m-\033[00m] Didn\'t find default hostname')
+
+
 def print_detect_cowrie():
     detect_cowrie_art = """
   ____                   _            _      _            _   
@@ -87,54 +159,15 @@ def main():
     print('Connecting via ssh ...')
     ssh_connection.connect()
     check_osversion(ssh_connection)
+    check_meminfo(ssh_connection)
+    check_mounts(ssh_connection)
+    check_cpu(ssh_connection)
+    check_group(ssh_connection)
+    check_hostname(ssh_connection)
 
 
 if __name__ == "__main__":
     main()
-
-
-def check_name(chan):
-    #svr@04
-    pass
-
-
-def check_group(chan):
-    #cat /etc/group
-    #cat /etc/shadow
-    #cat /ctc/passwd
-    pass
-
-
-def check_cpu(chan):
-    #cat /proc/cpuinfo
-    pass
-
-
-def check_mounts(chan):
-    # cat /proc/mounts
-    pass
-
-
-def check_meminfo(chan):
-    buff = ''
-    while not buff.endswith(':~# '):
-        resp = chan.recv(9999)
-        buff += resp.decode('utf-8')
-
-    chan.send('cat /proc/meminfo' + '\n')
-
-    buff = ''
-    memory = ''
-    while not buff.endswith(':~# '):
-        resp = chan.recv(9999)
-        if resp.decode('utf-8') != ':MemFree:          997740 kB' and resp != b'\x1b[4h':
-            memory = resp
-        buff += resp.decode('utf-8')
-        print(resp.decode('utf-8'))
-
-    print('dupa')
-    print(memory)
-
 
 
 
