@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Add tests to check: memory info, mounts file, cpu, group, hostname">
-      <change afterPath="$PROJECT_DIR$/detect_kippo.py" afterDir="false" />
+    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Detect kippo honeypot">
+      <change afterPath="$PROJECT_DIR$/detect_dionaea.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.detect_cowrie.executor": "Run",
+    "Python.detect_dionaea.executor": "Run",
     "Python.detect_kippo.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -55,7 +56,7 @@
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.detect_kippo">
+  <component name="RunManager" selected="Python.detect_dionaea">
     <configuration name="detect_cowrie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="detect_honeypot" />
       <option name="ENV_FILES" value="" />
@@ -71,6 +72,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_cowrie.py" />
       <option name="PARAMETERS" value="-ip 127.0.0.1 -u root -p 1234" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="detect_dionaea" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="detect_honeypot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_dionaea.py" />
+      <option name="PARAMETERS" value="-ip 172.17.0.2" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -124,11 +147,13 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.detect_dionaea" />
       <item itemvalue="Python.detect_kippo" />
       <item itemvalue="Python.detect_cowrie" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.detect_dionaea" />
         <item itemvalue="Python.detect_kippo" />
         <item itemvalue="Python.detect_cowrie" />
       </list>
@@ -190,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719983122636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Detect kippo honeypot">
+      <option name="closed" value="true" />
+      <created>1720026839174</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720026839175</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +242,7 @@
     <MESSAGE value="Detecting honeypots with nmap" />
     <MESSAGE value="Create script to detect cowrie honeypot, class to handle ssh connections, os version test" />
     <MESSAGE value="Add tests to check: memory info, mounts file, cpu, group, hostname" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests to check: memory info, mounts file, cpu, group, hostname" />
+    <MESSAGE value="Detect kippo honeypot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Detect kippo honeypot" />
   </component>
 </project>
