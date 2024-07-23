@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Detect kippo honeypot">
-      <change afterPath="$PROJECT_DIR$/detect_dionaea.py" afterDir="false" />
+    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Detect os on port on dionaea honeypot">
+      <change afterPath="$PROJECT_DIR$/detect_conpot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detect_conpot_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/detect_honeypot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/detect_honeypot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect_cowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_cowrie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +36,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ZupaPomidorowa/detect_honeypot.git&quot;,
-    &quot;accountId&quot;: &quot;49a17858-c837-4603-be79-fa4a5badc3ac&quot;
+    &quot;accountId&quot;: &quot;be730e29-819f-4e97-8c58-3b661fd0a2e9&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -47,8 +51,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.contextlib.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.detect_conpot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_conpot_v2.executor&quot;: &quot;Run&quot;,
     &quot;Python.detect_cowrie.executor&quot;: &quot;Run&quot;,
     &quot;Python.detect_dionaea.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_dionaea_v2.executor&quot;: &quot;Run&quot;,
     &quot;Python.detect_kippo.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -56,7 +64,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.detect_dionaea_v2">
+  <component name="RunManager" selected="Python.main">
     <configuration name="detect_cowrie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="detect_honeypot" />
       <option name="ENV_FILES" value="" />
@@ -248,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720026839175</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Detect os on port on dionaea honeypot">
+      <option name="closed" value="true" />
+      <created>1721346444462</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721346444463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,6 +284,7 @@
     <MESSAGE value="Create script to detect cowrie honeypot, class to handle ssh connections, os version test" />
     <MESSAGE value="Add tests to check: memory info, mounts file, cpu, group, hostname" />
     <MESSAGE value="Detect kippo honeypot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Detect kippo honeypot" />
+    <MESSAGE value="Detect os on port on dionaea honeypot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Detect os on port on dionaea honeypot" />
   </component>
 </project>

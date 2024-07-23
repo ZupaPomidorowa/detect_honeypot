@@ -1,7 +1,6 @@
 import argparse
 import paramiko
 
-
 class SSHConnect:
     def __init__(self, ip, port, username, password):
         self.ip = ip
