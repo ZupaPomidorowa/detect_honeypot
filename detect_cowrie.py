@@ -133,15 +133,15 @@ def check_hostname(ssh_connection):
         print('[\033[91m-\033[00m] Didn\'t find default hostname')
 
 
-def print_detect_cowrie():
-    detect_cowrie_art = """
-  ____                   _            _      _            _   
- / ___|_ __ _____      _(_) ___    __| | ___| |_ ___  ___| |_ 
-| |   | '__/ _ \ \ /\ / / |/ _ \  / _` |/ _ \ __/ _ \/ __| __|
-| |___| | | (_) \ V  V /| |  __/ | (_| |  __/ ||  __/ (__| |_ 
- \____|_|  \___/ \_/\_/ |_|\___|  \__,_|\___|\__\___|\___|\__|
-    """
-    print(detect_cowrie_art)
+# def print_detect_cowrie():
+#     detect_cowrie_art = """
+#   ____                   _            _      _            _
+#  / ___|_ __ _____      _(_) ___    __| | ___| |_ ___  ___| |_
+# | |   | '__/ _ \ \ /\ / / |/ _ \  / _` |/ _ \ __/ _ \/ __| __|
+# | |___| | | (_) \ V  V /| |  __/ | (_| |  __/ ||  __/ (__| |_
+#  \____|_|  \___/ \_/\_/ |_|\___|  \__,_|\___|\__\___|\___|\__|
+#     """
+#     print(detect_cowrie_art)
 
 
 def main():
@@ -152,7 +152,7 @@ def main():
 
     args = parser.parse_args()
 
-    print_detect_cowrie()
+    # print_detect_cowrie()
 
     ssh_connection = SSHConnect(args.ip, '2222', args.username, args.password)
     print('Connecting via ssh ...')
