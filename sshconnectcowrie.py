@@ -1,6 +1,7 @@
 import paramiko
 
-class SSHConnect:
+
+class SSHConnectCowrie:
     def __init__(self, ip, port, username, password):
         self.ip = ip
         self.port = port
@@ -110,6 +111,26 @@ binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,relatime 0 0"""
             print('[\033[92m+\033[00m] Found phil in group')
         else:
             print('[\033[91m-\033[00m] Didn\'t find phil in group')
+
+    def check_shadow(self):
+        print('Checking shadow file')
+        end = '~# '
+        resp = self.execute_command('cat /etc/shadow', end)
+        default_user = 'phil'
+        if default_user in resp:
+            print('[\033[92m+\033[00m] Found user phil in shadow file')
+        else:
+            print('[\033[91m-\033[00m] Didn\'t find user phil in shadow file')
+
+    def check_passwd(self):
+        print('Checking passwd file')
+        end = '~# '
+        resp = self.execute_command('cat /etc/passwd', end)
+        default_user = 'phil'
+        if default_user in resp:
+            print('[\033[92m+\033[00m] Found user phil in passwd file')
+        else:
+            print('[\033[91m-\033[00m] Didn\'t find user phil in passwd file')
 
     def check_hostname(self):
         print('Checking hostname')

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Recactor and add more test to detect cowrie">
-      <change afterPath="$PROJECT_DIR$/tests/dionaea/dionaea_check_ports.py" afterDir="false" />
+    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Recactor dioneaea and conpot test">
+      <change afterPath="$PROJECT_DIR$/detect_honeypots.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmlcontext.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect_conpot.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conpot/detect_conpot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect_conpot_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conpot/detect_conpot_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect_all_honeypots.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_all_honeypots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssh_cowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/sshconnectcowrie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/dionaea/detect_dionaea.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/dionaea/detect_dionaea.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/dionaea/detect_dionaea_v2.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +58,10 @@
     "Python.detect_cowrie.executor": "Run",
     "Python.detect_dionaea.executor": "Run",
     "Python.detect_dionaea_v2.executor": "Run",
+    "Python.detect_honeypots.executor": "Run",
     "Python.detect_kippo.executor": "Run",
     "Python.dionaea_check_ports.executor": "Run",
+    "Python.htmlcontext.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -68,36 +70,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/tests/conpot" />
       <recent name="$PROJECT_DIR$/tests/dionaea" />
       <recent name="$PROJECT_DIR$/tests/kippo" />
       <recent name="$PROJECT_DIR$/tests/cowrie" />
-      <recent name="$PROJECT_DIR$/tests" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="detect_cowrie-v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="detect_honeypot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/cowrie/detect_cowrie-v1.py" />
-      <option name="PARAMETERS" value="-ip 127.0.0.1 -u root -p 1234" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.detect_honeypots">
     <configuration name="detect_cowrie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="detect_honeypot" />
       <option name="ENV_FILES" value="" />
@@ -136,6 +116,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/dionaea/detect_dionaea.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="detect_honeypots" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="detect_honeypot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_honeypots.py" />
+      <option name="PARAMETERS" value="-ip 172.17.0.2" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -189,18 +191,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.detect_cowrie" />
+      <item itemvalue="Python.detect_honeypots" />
       <item itemvalue="Python.detect_dionaea_v2" />
       <item itemvalue="Python.dionaea_check_ports" />
       <item itemvalue="Python.detect_kippo" />
-      <item itemvalue="Python.detect_cowrie-v1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.detect_honeypots" />
+        <item itemvalue="Python.detect_dionaea_v2" />
         <item itemvalue="Python.dionaea_check_ports" />
         <item itemvalue="Python.detect_kippo" />
         <item itemvalue="Python.detect_cowrie" />
-        <item itemvalue="Python.detect_dionaea_v2" />
-        <item itemvalue="Python.detect_cowrie-v1" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722058915609</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Recactor dioneaea and conpot test">
+      <option name="closed" value="true" />
+      <created>1722063299842</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722063299842</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,6 +334,7 @@
     <MESSAGE value="Detect conpot honeypot" />
     <MESSAGE value="Detect all honeypots and default communication" />
     <MESSAGE value="Recactor and add more test to detect cowrie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recactor and add more test to detect cowrie" />
+    <MESSAGE value="Recactor dioneaea and conpot test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recactor dioneaea and conpot test" />
   </component>
 </project>
