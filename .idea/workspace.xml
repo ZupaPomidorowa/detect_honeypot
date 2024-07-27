@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Detect conpot honeypot">
-      <change afterPath="$PROJECT_DIR$/detect_all_honeypots.py" afterDir="false" />
+    <list default="true" id="948980aa-e4c5-457a-a72f-69f6c34317f7" name="Changes" comment="Detect all honeypots and default communication">
+      <change afterPath="$PROJECT_DIR$/tests/cowrie/detect_cowrie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/cowrie/sshconnect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect_conpot_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_conpot_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect_cowrie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect_kippo.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/kippo/detect_kippo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,24 +48,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.contextlib.executor": "Debug",
-    "Python.detect_all_honeypots.executor": "Run",
-    "Python.detect_conpot.executor": "Run",
-    "Python.detect_conpot_v2.executor": "Run",
-    "Python.detect_cowrie.executor": "Run",
-    "Python.detect_dionaea.executor": "Run",
-    "Python.detect_dionaea_v2.executor": "Run",
-    "Python.detect_kippo.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.contextlib.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.detect_all_honeypots.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_conpot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_conpot_v2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_cowrie.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_dionaea.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_dionaea_v2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_kippo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="detect_cowrie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/kippo" />
+      <recent name="$PROJECT_DIR$/tests/cowrie" />
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.detect_kippo">
+    <configuration name="detect_cowrie-v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="detect_honeypot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,8 +85,30 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_cowrie.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/cowrie/detect_cowrie-v1.py" />
       <option name="PARAMETERS" value="-ip 127.0.0.1 -u root -p 1234" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="detect_cowrie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="detect_honeypot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/cowrie" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/cowrie/detect_cowrie.py" />
+      <option name="PARAMETERS" value="-ip 172.17.0.2 -u root -p 1234" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -143,7 +174,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_kippo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/kippo/detect_kippo.py" />
       <option name="PARAMETERS" value="-ip 172.17.0.2" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,41 +183,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="detect_honeypot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.main" />
+      <item itemvalue="Python.detect_cowrie" />
       <item itemvalue="Python.detect_dionaea_v2" />
       <item itemvalue="Python.detect_dionaea" />
       <item itemvalue="Python.detect_kippo" />
-      <item itemvalue="Python.detect_cowrie" />
+      <item itemvalue="Python.detect_cowrie-v1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.detect_dionaea_v2" />
-        <item itemvalue="Python.detect_dionaea" />
         <item itemvalue="Python.detect_kippo" />
         <item itemvalue="Python.detect_cowrie" />
+        <item itemvalue="Python.detect_dionaea_v2" />
+        <item itemvalue="Python.detect_dionaea" />
+        <item itemvalue="Python.detect_cowrie-v1" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721707810495</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Detect all honeypots and default communication">
+      <option name="closed" value="true" />
+      <created>1721887645425</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721887645425</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +310,7 @@
     <MESSAGE value="Detect kippo honeypot" />
     <MESSAGE value="Detect os on port on dionaea honeypot" />
     <MESSAGE value="Detect conpot honeypot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Detect conpot honeypot" />
+    <MESSAGE value="Detect all honeypots and default communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Detect all honeypots and default communication" />
   </component>
 </project>
