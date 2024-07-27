@@ -1,20 +1,17 @@
 import socket
 
 
-def connect_to_socket(ip, port):
+def connect_to_socket(ip, port, message=None):
     try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((ip, port))
+            if message:
+                s.sendall(message)
+            resp = s.recv(1024)
+            return resp
     except socket.error as e:
-        print(f'Socket creation failed: {e}')
-
-    try:
-        s.connect((ip, port))
-        resp = s.recv(1024).decode().strip()
-        s.close()
-    except socket.error as e:
-        print(f'Connection to failed')
-
-    return resp
+        print(f'Socket error {e}')
+        return None
 
 
 def port_2121(ip):
@@ -56,10 +53,10 @@ def main():
     ip = '172.17.0.2'
     print('Start scanning ...')
     port_2121(ip)
-    # port_5020(ip)
-    # port_8800(ip)
-    # port_10201(ip)
-    # port_44818(ip)
+    port_5020(ip)
+    port_8800(ip)
+    port_10201(ip)
+    port_44818(ip)
 
 
 if __name__ == '__main__':

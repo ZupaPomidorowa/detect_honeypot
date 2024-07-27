@@ -3,6 +3,21 @@ import nmap3
 import json
 
 
+def run_nmap(ip_adders):
+    print(f'Start nmap scan {ip_adders}')
+    nmap = nmap3.Nmap()
+    result: dict = nmap.nmap_version_detection(ip_adders, args='-p- -A -T4')
+
+    if check_cowrie(result):
+        print('Cowrie honeypot detected')
+    elif check_kippo(result):
+        print('Kippo honeypot detected')
+    elif check_dionaea(result):
+        print('Dionaea honeypot detected')
+    elif check_conpot(result):
+        print('Conpot honeypot detected')
+
+
 def check_cowrie(scan_result):
     ip = list(scan_result.keys())[0]
     ports = scan_result[ip]['ports']
@@ -58,23 +73,6 @@ def check_conpot(scan_result):
         return True
 
     return False
-
-
-def run_nmap(ip_adders):
-    print(f'Start nmap scan {ip_adders}')
-    nmap = nmap3.Nmap()
-    result: dict = nmap.nmap_version_detection(ip_adders, args='-p- -A -T4')
-
-    if check_cowrie(result):
-        print('Cowrie honeypot detected')
-    elif check_kippo(result):
-        print('Kippo honeypot detected')
-    elif check_dionaea(result):
-        print('Dionaea honeypot detected')
-    elif check_conpot(result):
-        print('Conpot honeypot detected')
-
-    #print(result)
 
 
 def main():

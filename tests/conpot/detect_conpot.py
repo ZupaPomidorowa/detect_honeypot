@@ -26,13 +26,11 @@ def check_http(ip, port):
 def main():
     ip = '172.17.0.2'
     print('Start scanning ...')
-    # port = 2121
-    # print('Connecting to port 2121')
-    # ftp_response = check_ftp(ip, port)
-    # print(ftp_response)
-    port = 8800
+    print('Connecting to port 2121')
+    ftp_response = check_ftp(ip, 2121)
+    print(ftp_response)
     print('Connecting to port 8800')
-    http_response = check_http(ip, port)
+    http_response = check_http(ip, 8800)
     print(http_response)
 
 
