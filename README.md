@@ -45,6 +45,9 @@ Users can simply provide the host IP address. The system will then scan the host
 ## Further improvments
 Enhance the version detection process so that the system identifies the specific version of the honeypot running on the host, rather than just the latest version available.
 
+## Challanges and valuable lessons
+Participating in GSoC 2024 has been an rewarding experience, contributes to my personal growth. I immersed myself in open-source development. Along the way, I faced challenges in managing my time effectively and regulary committing. It required effort to maintain self-discipline, set weekly goals, and consistently work on them. Overall, my time in GSoC was highly productive; I gained valuable insights and experienced substantial personal and professional development.
+
 [Link to forked repository](https://github.com/ZupaPomidorowa/detect_honeypot)
 
 [Link to pull request](https://github.com/honeynet/honeyscanner/pull/38)
