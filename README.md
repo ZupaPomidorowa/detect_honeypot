@@ -66,3 +66,6 @@ During my participation in the Google Summer of Code, I had the opportunity to l
 [Link to forked repository](https://github.com/ZupaPomidorowa/detect_honeypot)
 
 [Link to pull request](https://github.com/honeynet/honeyscanner/pull/38)
+
+![obraz](https://github.com/user-attachments/assets/1e746150-5cb4-4974-b439-4826271b0e82)
+
